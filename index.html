@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Healthcare Support Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Healthcare Support Portal</h1>
+    <p class="subtitle">
+        A simple support system for patients and NGOs
+    </p>
+
+    <form id="supportForm">
+        <label>Full Name</label>
+        <input type="text" id="name" required>
+
+        <label>Age</label>
+        <input type="number" id="age" required>
+
+        <label>Contact Number</label>
+        <input type="tel" id="contact" required>
+
+        <label>Health Issue / Query</label>
+        <textarea id="issue" rows="4" required></textarea>
+
+        <button type="submit">Submit Request</button>
+    </form>
+
+    <div id="responseMessage" class="hidden"></div>
+
+    <hr>
+
+    <h2>🤖 AI Help (FAQ Bot – Concept)</h2>
+    <div class="chatbox">
+        <p><strong>Bot:</strong> Ask me something!</p>
+
+        <button onclick="askBot('help')">How can I get help?</button>
+        <button onclick="askBot('free')">Is this service free?</button>
+        <button onclick="askBot('volunteer')">How to become a volunteer?</button>
+
+        <p id="botReply"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
